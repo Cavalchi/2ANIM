@@ -1,0 +1,31 @@
+// nesse código caso vc tenha feito 2 animações no seu personagem, ou em algum objeto unity e ele precisa ser chamado em diferentes horas
+// por exmeplo "tocar no botão pela primeira vez o meu carro abre a porta, tocar novamente no mesmo botão fará com que ele feche a porta"
+// leve em consideração o "nomedaanimação" para mudar de acordo com a sua animação dentro do Animator UNity
+// vc precisa levar em consideração breve conhecimento de animação Unity
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Animationss : MonoBehaviour
+{
+    public Animator animator;
+    private bool isOpen = false;
+    public GameObject "seu objeto";
+   
+
+
+    public void OnButtonPress()
+    {
+        if (!isOpen)
+        {
+            animator.Play("nomedaanimação");
+            isOpen = true;
+        }
+        else
+        {
+            animator.Play("nomedaanimação");
+            isOpen = false;
+        }
+    }
+}
